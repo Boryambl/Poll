@@ -1,0 +1,113 @@
+.App {
+  background-color: white;
+  font-size: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #0ca82b;
+  /* text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+  color: white; */
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+h2 {
+  text-align: left;
+}
+button {
+  text-rendering: auto;
+  color: #0ca82b;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 15px 10px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 20px;
+  margin: 20px;
+  opacity: 1;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-radius: 30px;
+}
+button:hover {
+  border-bottom: 1px solid black;
+  opacity: 0.75;
+}
+button:disabled {
+  color: grey;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+img {
+  width: 100%;
+}
+/* input {
+  width: 30px;
+  height: 30px;
+}
+input:checked {
+  width: 15px;
+  height: 15px;
+  background-color: #0ca82b;
+} */
+
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #0ca82b;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
