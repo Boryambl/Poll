@@ -1,27 +1,5 @@
-import {
-  Menu,
-  MenuDivider,
-  MenuItem,
-  Radio,
-  RadioGroup,
-  TextArea,
-} from "@blueprintjs/core";
-import Select from "react-select";
-
-import { Classes, Dialog } from "@blueprintjs/core";
-import classNames from "classnames";
 import React from "react";
-import {
-  Layer,
-  Rect,
-  Stage,
-  Group,
-  Line,
-  Label,
-  Text,
-  Circle,
-  Ellipse,
-} from "react-konva";
+import { Layer, Stage, Line, Text, Circle } from "react-konva";
 import logo from "./background.JPG";
 
 interface IGraphProps {
@@ -31,16 +9,16 @@ interface IGraphProps {
   traction: number;
 }
 export default class Poll extends React.Component<IGraphProps> {
-  constructor(props: IGraphProps) {
-    super(props);
-  }
   render() {
     const { team, tech, time, traction } = this.props;
     let score = team + time + tech + traction;
     return (
       <div className="graph">
-        <img src={logo}></img>
-        <h2 style={{ textAlign: "center" }}>Что-то написать</h2>
+        <img src={logo} alt=""></img>
+        <h2 style={{ textAlign: "center" }}>
+          Спасибо за участие! Ниже указан ваш общий балл и индивидуальные баллы
+          для каждой категории
+        </h2>
         <table>
           <thead>
             <tr>
@@ -162,28 +140,6 @@ export default class Poll extends React.Component<IGraphProps> {
                 stroke="#ea3651"
               />
             )}
-            {(team === 0 && tech === 0) ||
-              (traction === 0 && time === 0 && (
-                <Line
-                  x={550}
-                  y={550}
-                  points={[
-                    0 - traction * 20,
-                    0,
-                    0,
-                    tech * 20,
-                    time * 20,
-                    0,
-                    0,
-                    0 - team * 20,
-                  ]}
-                  closed
-                  fill="#0ca82b"
-                  opacity={0.7}
-                  stroke="#ea3651"
-                  tension={0}
-                />
-              ))}
             <Text fill="grey" x={0} y={530} text={"Достижения"} fontSize={18} />
             <Text
               fill="grey"

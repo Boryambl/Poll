@@ -1,18 +1,6 @@
-import {
-  Button,
-  Menu,
-  MenuDivider,
-  MenuItem,
-  Radio,
-  RadioGroup,
-  TextArea,
-} from "@blueprintjs/core";
-import { Classes, Dialog } from "@blueprintjs/core";
 import Select from "react-select";
 import React from "react";
-import classNames from "classnames";
 import Graph from "../Graph/index.tsx";
-import Modal from "react-modal";
 import logo from "./background.jpg";
 
 interface IPollState {
@@ -101,9 +89,9 @@ const tableHeaders = [
   "Пока не применимо",
   "Категорически не согласен",
   "Не согласен",
-  "Ни согласен, ни несогласен",
+  "Частично согласен, частично нет",
   "Согласен",
-  "Категорически согласен",
+  "Полностью согласен",
 ];
 const rawHeaders = {
   team: [
@@ -256,7 +244,7 @@ export default class Poll extends React.Component<any, IPollState> {
           </button>
         </div>
         <div style={showGraph ? { display: "none" } : {}}>
-          <img src={logo}></img>
+          <img src={logo} alt=""></img>
           <div style={{ textAlign: "left" }}>
             <h2> Общие вопросы</h2>
             <h4>В каком городе находится ваш стартап?</h4>
